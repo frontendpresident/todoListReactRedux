@@ -1,5 +1,4 @@
 const Tasks = (props) => {
- 
     return (
        props.todo.map(todo => {
            return(
@@ -7,7 +6,7 @@ const Tasks = (props) => {
                <p>
                    {todo.task}
                </p>
-               <button>х</button>
+               <button onClick={() => props.deleteTask(todo.id)}>х</button>
            </div>
            )
            

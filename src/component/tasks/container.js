@@ -4,9 +4,14 @@ import { deleteTask } from "../../redux/reducers/todoListReducer";
 
 const TasksContainer = (props) => {
 
-   
+  const deleteTask = (id) => {
+      return props.deleteTaskAC(id)
+  }
     return (
-        <Tasks todo={props.todo} deleteTask={deleteTask(props.todo.id)} />
+        <Tasks
+         todo={props.todo}
+         deleteTask={deleteTask}
+          />
     )
 }
 

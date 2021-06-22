@@ -15,16 +15,18 @@ const todoListReducer = (state = initialState, action) => {
             changeText: action.text
         }
         case ADD_TASK:
-            debugger
+            
             return {
                 ...state,
-                todo: [...state.todo, {id: state.todo.length, task: action.message, isDone: false}]
+                todo: [...state.todo, {id: state.todo.length, task: action.message, isDone: false}],
+                changeText: ''
             }
         case DELETE_TASK: 
-        return {
-            ...state,
-            todo: [...state.todo.filter(item => item.id !== action.id)]
-        }    
+            return {
+                ...state, 
+                todo: [...state.todo.filter(item => item.id !== action.id)]
+            }
+       
         default:
             return state
     }
