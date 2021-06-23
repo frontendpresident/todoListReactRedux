@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import { allTaskFilter, doneTaskFilter, notDoneTaskFilter } from '../../redux/reducers/todoListReducer';
 import TaskOptions from './index';
 
-const TaskOptionsContainer = ({doneTaskFilterAC, notDoneTaskFilterAC, allTaskFilterAC, activeBtn}) => {
-
+const TaskOptionsContainer = ({ doneTaskFilterAC, notDoneTaskFilterAC, allTaskFilterAC, activeBtn }) => {
+    
     return (
         <TaskOptions
             doneTaskFilter={doneTaskFilterAC}

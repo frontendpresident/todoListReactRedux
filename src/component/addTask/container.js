@@ -4,17 +4,17 @@ import { addTaskAC } from '../../redux/reducers/todoListReducer';
 import { useState } from 'react';
 
 const AddTaskContainer = (props) => {
-    const [value, setvalue] = useState('')
+    const [value, setValue] = useState('')
 
     const handleChange = (e) => {
-        setvalue(e.target.value)
+        setValue(e.target.value)
     }
 
     const addTask = () => {
 
         if (value) {
              props.addTask(value)
-            return setvalue('')
+            return setValue('')
         }
     }
 

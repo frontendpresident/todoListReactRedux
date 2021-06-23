@@ -23,9 +23,15 @@
   border: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  transition: 0.5s;
 }
 
 .button:hover {
   background-color: rgba(16, 212, 16, 0.692);
+}
+
+.button:active {
+  position: relative;
+  top: 1px;
 }
 
