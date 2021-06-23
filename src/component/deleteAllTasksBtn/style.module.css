@@ -1,18 +1,7 @@
-
-@import '~antd/dist/antd.css';
-
 .wrapper {
   margin: 10px 0;
   width: 100%;
   padding: 5px;
-}
-
-.btn {
-  width: 100%;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  transition: 0.5s;
 }
 
 .btn:hover {

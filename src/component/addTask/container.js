@@ -11,7 +11,7 @@ const AddTaskContainer = (props) => {
     }
 
     const addTask = () => {
-
+debugger
         if (value) {
              props.addTask(value)
             return setValue('')
@@ -29,7 +29,6 @@ const AddTaskContainer = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        changeText: state.changeText,
         todo: state.todo
     }
 }

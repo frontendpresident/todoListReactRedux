@@ -1,12 +1,25 @@
 import style from './style.module.css';
 import { Button } from 'antd';
 
-const TaskOptions = (props) => {
+const TaskOptions = ({ allTaskFilter, doneTaskFilter, notDoneTaskFilter, activeBtn }) => {
+    console.log(`activeBtn`, activeBtn)
     return (
         <div className={style.wrapper}>
-            <Button className={props.activeBtn === 'all' ? style.activeBtn : style.btn} onClick={props.allTaskFilter}>Все задачи</Button>
-            <Button className={props.activeBtn === 'done' ? style.activeBtn : style.btn} onClick={props.doneTaskFilter}>Выполненые</Button>
-            <Button className={props.activeBtn === 'notDone' ? style.activeBtn : style.btn} onClick={props.notDoneTaskFilter}>Не выполненые</Button>
+            <Button
+                onClick={allTaskFilter}
+                type={activeBtn === 'all' ? 'success' : 'primary'}
+                size={'small'}
+            >Все задачи</Button>
+            <Button
+                onClick={doneTaskFilter}
+                type={activeBtn === 'done' ? 'success' : 'primary'}
+                size={'small'}
+            > Выполненые</Button>
+            <Button
+                onClick={notDoneTaskFilter}
+                type={activeBtn === 'notDone' ? 'success' : 'primary'}
+                size={'small'}
+            >Не выполненые</Button>
         </div>
     )
 }
