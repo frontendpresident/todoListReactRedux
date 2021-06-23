@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 .wrapper {
   width: 100%;
   margin: 10px 0;
@@ -7,10 +9,23 @@
   align-items: center;
 }
 
-.wrapper input {
+.input {
   width: 65%;
+  outline: none;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
-.wrapper button {
-  width: 30%;
+.button {
+  width: 35%;
+  outline: none;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
+
+.button:hover {
+  background-color: rgba(16, 212, 16, 0.692);
+}
+

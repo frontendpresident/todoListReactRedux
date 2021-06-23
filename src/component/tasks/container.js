@@ -1,27 +1,27 @@
-import Tasks from "./tasks";
-import { connect } from "react-redux";
-import { deleteTask, changeState } from "../../redux/reducers/todoListReducer";
+import Tasks from './tasks';
+import { connect } from 'react-redux';
+import { deleteTask, changeState } from '../../redux/reducers/todoListReducer';
 
-const TasksContainer = (props) => {
+const TasksContainer = ({deleteTaskAC, changeStateAC, filterStatus, filter, todo}) => {
 
     const deleteTask = (id) => {
-        return props.deleteTaskAC(id)
+        return deleteTaskAC(id)
     }
 
     const changeStateTask = id => {
-        return props.changeStateAC(id)
+        return changeStateAC(id)
     }
 
     const filterTask = () => {
-        if (props.filterStatus === true) {
-            return props.filter
+        if (filterStatus) {
+            return filter
         }
-        return props.todo
+        return todo
     }
 
     return (
         <Tasks
-            todo={props.todo}
+            todo={todo}
             deleteTask={deleteTask}
             changeStateTask={changeStateTask}
             filterTask={filterTask}

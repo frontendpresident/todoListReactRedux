@@ -10,7 +10,8 @@ const initialState = {
     changeText: '',
     todo: [],
     filter: [],
-    filterStatus: false
+    filterStatus: false,
+    activeBtnStyle: ''
 }
 
 const todoListReducer = (state = initialState, action) => {
@@ -46,20 +47,23 @@ const todoListReducer = (state = initialState, action) => {
             return {
                 ...state,
                 filter: state.todo.filter(item => item.isDone === true),
-                filterStatus: true
+                filterStatus: true,
+                activeBtnStyle: 'done'
             }
 
         case NOT_DONE_TASK_FILTER:
             return {
                 ...state,
                 filter: state.todo.filter(item => item.isDone === false),
-                filterStatus: true
+                filterStatus: true,
+                activeBtnStyle: 'notDone'
             }
 
         case ALL_TASK_FILTER:
             return {
                 ...state,
-                filterStatus: false
+                filterStatus: false,
+                activeBtnStyle: 'all'
             }
 
         case DELETE_ALL_TASKS:

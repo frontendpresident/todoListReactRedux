@@ -1,7 +1,19 @@
-.wrapper {
+.addTask {
   width: 500px;
   height: auto;
   margin: 20px 0;
   padding: 10px;
-  background-color: rgba(44, 48, 48, 0.637);
+  background-color: rgba(136, 180, 221, 0.637);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.tasks {
+  width: 500px;
+  height: auto;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: rgba(136, 180, 221, 0.637);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }

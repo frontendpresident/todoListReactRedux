@@ -1,9 +1,10 @@
 import style from './style.module.css'
+import { Button } from 'antd';
 
 const DeleteAll = (props) => {
     return (
         <div className={style.wrapper}>
-            <button onClick={props.deleteAll}>Удалить все задачи</button>
+            <Button className={style.btn} onClick={props.deleteAll}>Удалить все задачи</Button>
         </div>
     )
 }

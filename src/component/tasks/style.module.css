@@ -2,18 +2,36 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid white;
-  padding: 10px;
+  border-bottom: 1px solid white;
+  padding: 5px;
   margin: 5px 0;
 }
 
+.wrapper:hover {
+  background-color: rgba(115, 165, 212, 0.288);
+}
+
 .task {
-  color: white;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
   margin: 0;
 }
 
 .doneTask {
-  color: white;
+  font-size: 24px;
+  color: rgba(4, 97, 17, 0.973);
   margin: 0;
   text-decoration: line-through;
+}
+
+.noneTasks {
+  width: 100%;
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.63);
+  text-align: center;
+}
+
+.btn {
+  color: red;
+  font-size: 20px;
 }

@@ -4,3 +4,24 @@
   text-align: center;
   padding: 5px;
 }
+
+.btn {
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: rgba(16, 212, 16, 0.692);
+}
+
+.activeBtn {
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgba(81, 67, 207, 0.534);
+  position: relative;
+  top: 2px;
+}

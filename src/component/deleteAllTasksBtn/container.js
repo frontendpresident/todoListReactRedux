@@ -8,12 +8,6 @@ const DeleteAllContainer = (props) => {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-
-    }
-}
-
 const mapDispatchToProps = (dispatch) => {
     return {
         deleteAllAC: () => {
@@ -22,4 +16,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DeleteAllContainer);
+export default connect(null, mapDispatchToProps)(DeleteAllContainer);

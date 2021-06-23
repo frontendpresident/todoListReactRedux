@@ -2,20 +2,21 @@ import { connect } from 'react-redux';
 import { allTaskFilter, doneTaskFilter, notDoneTaskFilter } from '../../redux/reducers/todoListReducer';
 import TaskOptions from './index';
 
-const TaskOptionsContainer = (props) => {
+const TaskOptionsContainer = ({doneTaskFilterAC, notDoneTaskFilterAC, allTaskFilterAC, activeBtn}) => {
 
     return (
         <TaskOptions
-            doneTaskFilter={props.doneTaskFilterAC}
-            notDoneTaskFilter={props.notDoneTaskFilterAC}
-            allTaskFilter={props.allTaskFilterAC}
+            doneTaskFilter={doneTaskFilterAC}
+            notDoneTaskFilter={notDoneTaskFilterAC}
+            allTaskFilter={allTaskFilterAC}
+            activeBtn={activeBtn}
         />
     )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps =(state) => {
     return {
-
+        activeBtn: state.activeBtnStyle
     }
 }
 

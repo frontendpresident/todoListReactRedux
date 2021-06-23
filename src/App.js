@@ -1,5 +1,4 @@
 import './App.css';
-import Header from './component/header';
 import AddTaskContainer from './component/addTask/container';
 import TasksContainer from './component/tasks/container';
 import TaskOptionsContainer from './component/taskOptionsBtn/container';
@@ -9,14 +8,17 @@ import store from './redux/store';
 
 function App() {
   return (
-    <div className="wrapper">
+    <div>
       <Provider store={store}>
-        <Header />
+      <div className='addTask'>
         <AddTaskContainer />
+      </div>
+    <div className='tasks'>
         <TasksContainer />
         <TaskOptionsContainer />
         <DeleteAllContainer />
-      </Provider>
+    </div>
+    </Provider>
     </div>
   );
 }
