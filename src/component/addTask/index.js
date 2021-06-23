@@ -1,10 +1,10 @@
-import style from './style.module.css'
+import style from './style.module.css';
 
 const AddTask = (props) => {
-    
+
     return (
         <div className={style.wrapper}>
-            <input value={props.changeText} onChange={props.handleChange}/>
+            <input value={props.value} onChange={props.handleChange} />
             <button onClick={props.addTask}>Добавить</button>
         </div>
     )

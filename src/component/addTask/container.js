@@ -1,20 +1,27 @@
-import AddTask from './index'
-import { connect } from 'react-redux'
-import { addTaskAC, changeText } from '../../redux/reducers/todoListReducer'
+import AddTask from './index';
+import { connect } from 'react-redux';
+import { addTaskAC } from '../../redux/reducers/todoListReducer';
+import { useState } from 'react';
 
 const AddTaskContainer = (props) => {
 
+    const [value, setvalue] = useState('')
+
     const handleChange = (e) => {
-        return props.changeTextAC(e.target.value)
+        setvalue(e.target.value)
     }
 
     const addTask = () => {
-        props.addTask(props.changeText)
+
+        if (value) {
+            props.addTask(value)
+            return setvalue('')
+        }
     }
 
     return (
         <AddTask
-            changeText={props.changeText}
+            value={value}
             handleChange={handleChange}
             addTask={addTask}
         />
@@ -30,13 +37,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        changeTextAC: text => {
-            dispatch(changeText(text))
-        },
         addTask: message => {
             dispatch(addTaskAC(message))
         }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddTaskContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(AddTaskContainer);
