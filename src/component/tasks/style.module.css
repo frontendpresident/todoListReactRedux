@@ -6,8 +6,6 @@
   padding: 5px;
   margin: 5px 0;
 }
-@import '~antd/dist/antd.css';
-
 .wrapper:hover {
   background-color: rgba(115, 165, 212, 0.288);
 }

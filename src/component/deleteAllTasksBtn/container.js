@@ -2,9 +2,9 @@ import { connect } from 'react-redux';
 import { deleteAllTasks } from '../../redux/reducers/todoListReducer';
 import DeleteAll from './index';
 
-const DeleteAllContainer = (props) => {
+const DeleteAllContainer = ({ deleteAllAC }) => {
     return (
-        <DeleteAll deleteAll={props.deleteAllAC} />
+        <DeleteAll deleteAll={deleteAllAC} />
     )
 }
 

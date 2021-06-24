@@ -2,7 +2,6 @@ import style from './style.module.css';
 import { Button } from 'antd';
 
 const TaskOptions = ({ allTaskFilter, doneTaskFilter, notDoneTaskFilter, activeBtn }) => {
-    console.log(`activeBtn`, activeBtn)
     return (
         <div className={style.wrapper}>
             <Button

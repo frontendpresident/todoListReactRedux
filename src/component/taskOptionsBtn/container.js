@@ -3,7 +3,7 @@ import { allTaskFilter, doneTaskFilter, notDoneTaskFilter } from '../../redux/re
 import TaskOptions from './index';
 
 const TaskOptionsContainer = ({ doneTaskFilterAC, notDoneTaskFilterAC, allTaskFilterAC, activeBtn }) => {
-    
+
     return (
         <TaskOptions
             doneTaskFilter={doneTaskFilterAC}
@@ -14,7 +14,7 @@ const TaskOptionsContainer = ({ doneTaskFilterAC, notDoneTaskFilterAC, allTaskFi
     )
 }
 
-const mapStateToProps =(state) => {
+const mapStateToProps = (state) => {
     return {
         activeBtn: state.activeBtnStyle
     }
@@ -34,4 +34,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TaskOptionsContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(TaskOptionsContainer);

@@ -11,7 +11,6 @@ const AddTaskContainer = (props) => {
     }
 
     const addTask = () => {
-debugger
         if (value) {
              props.addTask(value)
             return setValue('')

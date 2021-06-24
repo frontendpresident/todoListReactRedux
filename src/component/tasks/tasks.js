@@ -15,7 +15,6 @@ const Tasks = ({ filterTask, changeStateTask, deleteTask }) => {
                         <CloseCircleOutlined className={style.btn} onClick={() => deleteTask(todo.id)} />
                     </div>
                 )
-
             })
     )
 }

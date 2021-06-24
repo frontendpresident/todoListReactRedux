@@ -28,7 +28,6 @@ const TasksContainer = ({ deleteTaskAC, changeStateAC, filterStatus, filter, tod
     )
 }
 
-
 const mapStateToProps = (state) => {
     return {
         todo: state.todo,
@@ -48,4 +47,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TasksContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(TasksContainer);

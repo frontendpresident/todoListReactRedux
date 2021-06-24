@@ -10,15 +10,15 @@ function App() {
   return (
     <div>
       <Provider store={store}>
-      <div className={style.addTask}>
-        <AddTaskContainer />
-      </div>
-    <div className={style.tasks}>
-        <TasksContainer />
-        <TaskOptionsContainer />
-        <DeleteAllContainer />
-    </div>
-    </Provider>
+        <div className={style.addTask}>
+          <AddTaskContainer />
+        </div>
+        <div className={style.tasks}>
+          <TasksContainer />
+          <TaskOptionsContainer />
+          <DeleteAllContainer />
+        </div>
+      </Provider>
     </div>
   );
 }
