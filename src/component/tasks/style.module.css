@@ -6,6 +6,7 @@
   padding: 5px;
   margin: 5px 0;
 }
+
 .wrapper:hover {
   background-color: rgba(115, 165, 212, 0.288);
 }

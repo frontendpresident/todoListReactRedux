@@ -1,6 +1,7 @@
 import style from './style.module.css';
 import { CloseCircleOutlined } from '@ant-design/icons';
 const Tasks = ({ filterTask, changeStateTask, deleteTask }) => {
+    
     return (
         filterTask().length === 0
             ? <div className={style.noneTasks}>
