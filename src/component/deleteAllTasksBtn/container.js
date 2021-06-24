@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
-import { deleteAllTasks } from '../../redux/reducers/todoListReducer';
+import { deleteAllTasksThunk } from '../../redux/reducers/todoListReducer';
 import DeleteAll from './index';
 
-const DeleteAllContainer = ({ deleteAllAC }) => {
+const DeleteAllContainer = ({ deleteAllTasks }) => {
     return (
-        <DeleteAll deleteAll={deleteAllAC} />
+        <DeleteAll deleteAll={deleteAllTasks} />
     )
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        deleteAllAC: () => {
-            dispatch(deleteAllTasks())
+        deleteAllTasks: () => {
+            dispatch(deleteAllTasksThunk())
         }
     }
 }

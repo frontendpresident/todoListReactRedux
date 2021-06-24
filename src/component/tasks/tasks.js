@@ -1,7 +1,7 @@
 import style from './style.module.css';
 import { CloseCircleOutlined } from '@ant-design/icons';
 const Tasks = ({ filterTask, changeStateTask, deleteTask }) => {
-    
+
     return (
         filterTask().length === 0
             ? <div className={style.noneTasks}>
@@ -9,11 +9,11 @@ const Tasks = ({ filterTask, changeStateTask, deleteTask }) => {
             </div>
             : filterTask().map(todo => {
                 return (
-                    <div key={todo.id} className={style.wrapper} onClick={() => changeStateTask(todo.id)}>
+                    <div key={todo.id} className={style.wrapper} onClick={() => changeStateTask(todo._id)}>
                         <p className={todo.isDone ? style.doneTask : style.task}>
-                            {todo.task}
+                            {todo.todo}
                         </p>
-                        <CloseCircleOutlined className={style.btn} onClick={() => deleteTask(todo.id)} />
+                        <CloseCircleOutlined className={style.btn} onClick={() => deleteTask(todo._id)} />
                     </div>
                 )
             })

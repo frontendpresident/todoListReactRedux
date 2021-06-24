@@ -1,27 +1,34 @@
 import Tasks from './tasks';
 import { connect } from 'react-redux';
-import { deleteTask, changeState } from '../../redux/reducers/todoListReducer';
+import { deleteTaskThunk, allTaskThunk, changeStateTaskThunk } from '../../redux/reducers/todoListReducer';
+import { useEffect } from 'react';
 
-const TasksContainer = ({ deleteTaskAC, changeStateAC, filterStatus, filter, todo }) => {
-    const deleteTask = (id) => {
-        return deleteTaskAC(id)
+const TasksContainer = ({ deleteTask, filterStatus, filter, tasks, allTaskThunk, changeStateTaskThunk }) => {
+
+    useEffect(() => {
+        allTaskThunk()
+        return () => {}
+    }, [])
+
+    const deleteTaskId = (id) => {
+        return deleteTask(id)
     }
 
     const changeStateTask = id => {
-        return changeStateAC(id)
+        return changeStateTaskThunk(id)
     }
 
     const filterTask = () => {
         if (filterStatus) {
             return filter
         }
-        return todo
+        return tasks
     }
 
     return (
         <Tasks
-            todo={todo}
-            deleteTask={deleteTask}
+            tasks={tasks}
+            deleteTask={deleteTaskId}
             changeStateTask={changeStateTask}
             filterTask={filterTask}
         />
@@ -30,7 +37,7 @@ const TasksContainer = ({ deleteTaskAC, changeStateAC, filterStatus, filter, tod
 
 const mapStateToProps = (state) => {
     return {
-        todo: state.todo,
+        tasks: state.tasks,
         filter: state.filter,
         filterStatus: state.filterStatus
     }
@@ -38,12 +45,15 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        deleteTaskAC: id => {
-            dispatch(deleteTask(id))
+        deleteTask: id => {
+            dispatch(deleteTaskThunk(id))
         },
-        changeStateAC: id => {
-            dispatch(changeState(id))
+        changeStateTaskThunk: (id) => {
+            dispatch(changeStateTaskThunk(id))
         },
+        allTaskThunk: () => {
+            dispatch(allTaskThunk())
+        }
     }
 }
 

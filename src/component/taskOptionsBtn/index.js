@@ -7,17 +7,17 @@ const TaskOptions = ({ allTaskFilter, doneTaskFilter, notDoneTaskFilter, activeB
             <Button
                 onClick={allTaskFilter}
                 type={activeBtn === 'all' ? 'success' : 'primary'}
-                size={'small'}
+                size='small'
             >Все задачи</Button>
             <Button
                 onClick={doneTaskFilter}
                 type={activeBtn === 'done' ? 'success' : 'primary'}
-                size={'small'}
+                size='small'
             > Выполненые</Button>
             <Button
                 onClick={notDoneTaskFilter}
                 type={activeBtn === 'notDone' ? 'success' : 'primary'}
-                size={'small'}
+                size='small'
             >Не выполненые</Button>
         </div>
     )

@@ -8,7 +8,7 @@ const DeleteAll = ({ deleteAll }) => {
                 className={style.btn}
                 onClick={deleteAll}
                 block={true}
-                shape={'round'}
+                shape='round'
             >Удалить все задачи</Button>
         </div>
     )

@@ -1,6 +1,6 @@
 import AddTask from './index';
 import { connect } from 'react-redux';
-import { addTaskAC } from '../../redux/reducers/todoListReducer';
+import { addTaskThunk } from '../../redux/reducers/todoListReducer';
 import { useState } from 'react';
 
 const AddTaskContainer = (props) => {
@@ -12,7 +12,7 @@ const AddTaskContainer = (props) => {
 
     const addTask = () => {
         if (value) {
-             props.addTask(value)
+            props.addTaskThunk(value)
             return setValue('')
         }
     }
@@ -28,14 +28,14 @@ const AddTaskContainer = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        todo: state.todo
+        tasks: state.tasks
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addTask: message => {
-            dispatch(addTaskAC(message))
+        addTaskThunk: message => {
+            dispatch(addTaskThunk(message))
         }
     }
 }
