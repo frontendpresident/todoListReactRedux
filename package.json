@@ -17,6 +17,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "prettier": "prettier ./src/**/*.js ./src/*.js ./src/**/**/*.js --write",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,5 +41,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "prettier": "2.3.1"
+  }
 }
