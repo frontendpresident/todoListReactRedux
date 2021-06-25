@@ -1,10 +1,10 @@
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 import {
   allTaskFilter,
   doneTaskFilter,
   notDoneTaskFilter,
-} from "../../redux/todoList/actions";
-import TaskOptions from "./index";
+} from '../../redux/todoList/actions';
+import TaskOptions from './index';
 
 const TaskOptionsContainer = ({
   doneTaskFilterAC,
@@ -44,5 +44,5 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(TaskOptionsContainer);

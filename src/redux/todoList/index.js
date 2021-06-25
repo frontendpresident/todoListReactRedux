@@ -7,14 +7,14 @@ import {
   NOT_DONE_TASK_FILTER,
   ALL_TASK_FILTER,
   DELETE_ALL_TASKS,
-} from "./types";
+} from './types';
 
 const initialState = {
-  changeText: "",
+  changeText: '',
   tasks: [],
   filter: [],
   filterStatus: false,
-  activeBtnStyle: "",
+  activeBtnStyle: '',
 };
 
 const todoListReducer = (state = initialState, action) => {
@@ -59,7 +59,7 @@ const todoListReducer = (state = initialState, action) => {
         ...state,
         filter: state.tasks.filter((item) => item.isDone === true),
         filterStatus: true,
-        activeBtnStyle: "done",
+        activeBtnStyle: 'done',
       };
 
     case NOT_DONE_TASK_FILTER:
@@ -67,14 +67,14 @@ const todoListReducer = (state = initialState, action) => {
         ...state,
         filter: state.tasks.filter((item) => item.isDone === false),
         filterStatus: true,
-        activeBtnStyle: "notDone",
+        activeBtnStyle: 'notDone',
       };
 
     case ALL_TASK_FILTER:
       return {
         ...state,
         filterStatus: false,
-        activeBtnStyle: "all",
+        activeBtnStyle: 'all',
       };
 
     case DELETE_ALL_TASKS:

@@ -1,5 +1,5 @@
-import style from "./style.module.css";
-import { Button } from "antd";
+import style from './style.module.css';
+import { Button } from 'antd';
 
 const TaskOptions = ({
   allTaskFilter,
@@ -11,22 +11,22 @@ const TaskOptions = ({
     <div className={style.wrapper}>
       <Button
         onClick={allTaskFilter}
-        type={activeBtn === "all" ? "success" : "primary"}
+        type={activeBtn === 'all' ? 'success' : 'primary'}
         size="small"
       >
         Все задачи
       </Button>
       <Button
         onClick={doneTaskFilter}
-        type={activeBtn === "done" ? "success" : "primary"}
+        type={activeBtn === 'done' ? 'success' : 'primary'}
         size="small"
       >
-        {" "}
+        {' '}
         Выполненые
       </Button>
       <Button
         onClick={notDoneTaskFilter}
-        type={activeBtn === "notDone" ? "success" : "primary"}
+        type={activeBtn === 'notDone' ? 'success' : 'primary'}
         size="small"
       >
         Не выполненые

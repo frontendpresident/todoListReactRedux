@@ -1,5 +1,5 @@
-import style from "./style.module.css";
-import { Button } from "antd";
+import style from './style.module.css';
+import { Button } from 'antd';
 
 const DeleteAll = ({ deleteAll }) => {
   return (

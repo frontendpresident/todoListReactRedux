@@ -17,7 +17,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "prettier": "prettier ./src/**/*.js ./src/*.js ./src/**/**/*.js --write",
+    "prettier": "prettier --write -c src",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

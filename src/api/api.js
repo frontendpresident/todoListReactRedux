@@ -9,14 +9,14 @@ const errProcessing = () => {
 };
 
 export const getAllTasks = () => {
-  return fetch("/tasks").then((res) => res.json());
+  return fetch('/tasks').then((res) => res.json());
 };
 
 export const createTaskApi = (task) => {
-  return fetch("/", {
-    method: "POST",
+  return fetch('/', {
+    method: 'POST',
     headers: {
-      "Content-type": "application/json",
+      'Content-type': 'application/json',
     },
     body: JSON.stringify({ todo: task, isDone: false }),
   }).then(errProcessing());
@@ -24,18 +24,18 @@ export const createTaskApi = (task) => {
 
 export const deleteTaskApi = (id) => {
   return fetch(`/delete/${id}`, {
-    method: "DELETE",
+    method: 'DELETE',
   }).then(errProcessing());
 };
 
 export const deleteAllTaskApi = () => {
-  return fetch("/delete-all", {
-    method: "DELETE",
+  return fetch('/delete-all', {
+    method: 'DELETE',
   }).then(errProcessing());
 };
 
 export const changeStateApi = (id) => {
   return fetch(`/update-status/${id}`, {
-    method: "PUT",
+    method: 'PUT',
   }).then(errProcessing());
 };

@@ -1,5 +1,5 @@
-import style from "./style.module.css";
-import { Input, Button } from "antd";
+import style from './style.module.css';
+import { Input, Button } from 'antd';
 
 const AddTask = (props) => {
   return (

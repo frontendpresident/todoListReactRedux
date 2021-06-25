@@ -1,11 +1,11 @@
-import Tasks from "./tasks";
-import { connect } from "react-redux";
+import Tasks from './tasks';
+import { connect } from 'react-redux';
 import {
   deleteTaskThunk,
   allTaskThunk,
   changeStateTaskThunk,
-} from "../../redux/todoList/actions";
-import { useEffect } from "react";
+} from '../../redux/todoList/actions';
+import { useEffect } from 'react';
 
 const TasksContainer = ({
   deleteTask,

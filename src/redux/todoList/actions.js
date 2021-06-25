@@ -4,7 +4,7 @@ import {
   changeStateApi,
   deleteTaskApi,
   deleteAllTaskApi,
-} from "../../api/api";
+} from '../../api/api';
 import {
   GET_ALL_TASKS,
   ADD_TASK,
@@ -14,7 +14,7 @@ import {
   NOT_DONE_TASK_FILTER,
   ALL_TASK_FILTER,
   DELETE_ALL_TASKS,
-} from "./types";
+} from './types';
 
 export const getAllTasksAC = (todo) => ({ type: GET_ALL_TASKS, todo });
 export const addTaskAC = (message) => ({ type: ADD_TASK, message });
