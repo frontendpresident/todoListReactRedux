@@ -12,7 +12,5 @@ module.exports = app => {
 
     router.put('/update-status/:id', todoList.changeStateTasks);
 
-    router.put('/update-text/:id', todoList.changeTextTasks);
-
     app.use('/', router);
 }

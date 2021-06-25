@@ -1,6 +1,6 @@
 import AddTask from './index';
 import { connect } from 'react-redux';
-import { addTaskThunk } from '../../redux/reducers/todoListReducer';
+import { addTaskThunk } from '../../redux/todoList/actions';
 import { useState } from 'react';
 
 const AddTaskContainer = (props) => {

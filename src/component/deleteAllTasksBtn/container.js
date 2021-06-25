@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { deleteAllTasksThunk } from '../../redux/reducers/todoListReducer';
+import { deleteAllTasksThunk } from '../../redux/todoList/actions';
 import DeleteAll from './index';
 
 const DeleteAllContainer = ({ deleteAllTasks }) => {

@@ -3,8 +3,7 @@ const TodoList = db.todoList;
 
 exports.create = (req, res) => {
     if (!req.body) {
-        res.status(400).send({ message: 'Задача не создана' })
-        return
+        return res.status(400).send({ message: 'Задача не создана' })
     }
 
     const todoList = new TodoList({
@@ -23,9 +22,8 @@ exports.create = (req, res) => {
 }
 
 exports.getAll = (req, res) => {
-
     const todo = req.body.todo
-    let condition = todo ? { todo: { $regex: new RegExp(todo), $options: 'i' } } : {}
+    const condition = todo ? { todo: { $regex: new RegExp(todo), $options: 'i' } } : {}
 
     TodoList.find(condition)
         .then(data => {
@@ -38,6 +36,7 @@ exports.getAll = (req, res) => {
 
 exports.delete = (req, res) => {
     const id = req.params._id
+
     TodoList.deleteOne(id)
         .then((data) => {
             if (!data) {
@@ -53,7 +52,6 @@ exports.delete = (req, res) => {
 }
 
 exports.deleteAll = (req, res) => {
-
     TodoList.deleteMany({})
         .then(data => {
             res.send({ message: `${data.deleteCounter} задач удалено` })
@@ -66,11 +64,6 @@ exports.deleteAll = (req, res) => {
 }
 
 exports.changeStateTasks = (req, res) => {
-
-    if (!req.body) {
-        return res.status(400).send({ message: 'Статус выполнения не изменен' })
-    }
-
     TodoList.findById(req.params.id, (err, todo) => {
         if (err) {
             return res.status(400).json({ message: 'Произошла ошибка' })

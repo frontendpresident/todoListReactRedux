@@ -1,13 +1,11 @@
 import Tasks from './tasks';
 import { connect } from 'react-redux';
-import { deleteTaskThunk, allTaskThunk, changeStateTaskThunk } from '../../redux/reducers/todoListReducer';
+import { deleteTaskThunk, allTaskThunk, changeStateTaskThunk } from '../../redux/todoList/actions';
 import { useEffect } from 'react';
 
 const TasksContainer = ({ deleteTask, filterStatus, filter, tasks, allTaskThunk, changeStateTaskThunk }) => {
-
     useEffect(() => {
         allTaskThunk()
-        return () => {}
     }, [])
 
     const deleteTaskId = (id) => {
