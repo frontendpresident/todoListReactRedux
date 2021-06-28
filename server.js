@@ -35,6 +35,14 @@ require('./routes/todolist.routes')(app)
 
 const PORT = process.env.PORT || 3001;
 
+const path = require('path');
+
+app.use(express.static(path.resolve(__dirname, './client/build')));
+
+app.get('*',  (request, response) => {
+    response.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
+  });
+
 app.listen(PORT, () => {
     console.log(`Server on port: ${PORT}`);
 })
