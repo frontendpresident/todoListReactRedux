@@ -30,7 +30,7 @@ const todoListReducer = (state = initialState, action) => {
         ...state,
         tasks: [
           ...state.tasks,
-          { _id: action._id, todo: action.message, isDone: false },
+          {todo: action.message, isDone: false},
         ],
       };
 

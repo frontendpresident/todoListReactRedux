@@ -28,7 +28,9 @@ export const deleteAllTasks = () => ({ type: DELETE_ALL_TASKS });
 export const addTaskThunk = (message, todo) => (dispatch) => {
   return createTaskApi(message)
     .then(() => {
-      return dispatch(addTaskAC(message));
+       dispatch(addTaskAC(message));
+       dispatch(allTaskThunk())
+       return
     })
     .catch((err) => {
       return alert(`Произошла ошибка: ${err}`);
