@@ -43,7 +43,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "https://todo-list-s-maifetov.herokuapp.com/",
   "devDependencies": {
     "prettier": "2.3.1"
   }
